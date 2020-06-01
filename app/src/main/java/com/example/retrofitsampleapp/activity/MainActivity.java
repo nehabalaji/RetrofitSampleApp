@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         call.enqueue(new Callback<List<Movie>>() {
             @Override
             public void onResponse(Call<List<Movie>> call, Response<List<Movie>> response) {
-                
+
             }
 
             @Override
