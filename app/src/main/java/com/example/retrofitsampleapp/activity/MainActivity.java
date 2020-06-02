@@ -25,8 +25,7 @@ public class MainActivity extends AppCompatActivity {
     List<Movie> movieList;
     RecyclerView recyclerView;
     RecyclerViewAdapter recyclerViewAdapter;
-
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
