@@ -35,9 +35,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recycler_view);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        recyclerViewAdapter = new RecyclerViewAdapter(getApplicationContext(), movieList);
-        recyclerView.setAdapter(recyclerViewAdapter);
-        recyclerView.setHasFixedSize(true);
+
 
         ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
         Call<List<Movie>> call = apiService.getMovies();
@@ -52,5 +50,9 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("TAG","Response = "+t.toString());
             }
         });
+
+        recyclerViewAdapter = new RecyclerViewAdapter(getApplicationContext(), movieList);
+        recyclerView.setAdapter(recyclerViewAdapter);
+        recyclerView.setHasFixedSize(true);
     }
 }
