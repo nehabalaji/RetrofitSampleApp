@@ -11,4 +11,5 @@ public interface ApiInterface {
 
     @GET("volley_array.json")
     Call<List<Movie>> getMovies();
+    
 }
